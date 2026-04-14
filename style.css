@@ -1,1 +1,20 @@
 
+const upload = document.getElementById("videoUpload");
+const preview = document.getElementById("videoPreview");
+
+upload.addEventListener("change", function(){
+    const file = this.files[0];
+    if(file){
+        const url = URL.createObjectURL(file);
+        preview.src = url;
+    }
+});
+
+function addText(){
+    const text = document.getElementById("videoText").value;
+    document.getElementById("overlayText").innerText = text;
+}
+
+function downloadVideo(){
+    alert("Função de exportação em desenvolvimento!");
+}
