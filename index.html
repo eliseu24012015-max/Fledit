@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniCut Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+    <h1>MiniCut Editor</h1>
+
+    <input type="file" id="videoUpload" accept="video/*">
+
+    <video id="videoPreview" controls></video>
+
+    <div class="controls">
+        <label>Texto no vídeo:</label>
+        <input type="text" id="videoText" placeholder="Digite algo...">
+
+        <button onclick="addText()">Adicionar Texto</button>
+        <button onclick="downloadVideo()">Exportar</button>
+    </div>
+
+    <div id="overlayText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
